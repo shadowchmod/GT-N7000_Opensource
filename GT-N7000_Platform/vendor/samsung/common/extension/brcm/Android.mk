@@ -1,0 +1,61 @@
+LOCAL_PATH := $(call my-dir)
+
+#
+# copy brcm binaries into android
+#
+ifeq ($(BOARD_HAVE_BLUETOOTH_BCM_BTLA),true)
+
+ifeq ($(TARGET_PRODUCT),GT-I9220)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/GT-I9220/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/GT-I9220/BCM4330B1_002.001.003.0485.0501.hcd:system/bin/BCM4330B1_002.001.003.0485.0501.hcd
+
+else ifeq ($(TARGET_PRODUCT),SHV-E160S)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/SHV-E160S/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/bin/SHV-E160S/BCM4330B1_002.001.003.0221.0298.hcd:system/bin/BCM4330B1_002.001.003.0221.0298.hcd
+
+else ifeq ($(TARGET_PRODUCT),SHV-E160K)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/SHV-E160K/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/bin/SHV-E160K/BCM4330B1_002.001.003.0221.0298.hcd:system/bin/BCM4330B1_002.001.003.0221.0298.hcd
+
+else ifeq ($(TARGET_PRODUCT),SHV-E160L)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/SHV-E160S/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/bin/SHV-E160S/BCM4330B1_002.001.003.0221.0298.hcd:system/bin/BCM4330B1_002.001.003.0221.0298.hcd
+
+
+else ifeq ($(TARGET_PRODUCT),SGH-I717)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/SGH-I717/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/SGH-I717/BCM4330B1_002.001.003.0485.0500.hcd:system/bin/BCM4330B1_002.001.003.0485.0500.hcd
+
+else ifeq ($(TARGET_PRODUCT),GT-N7000)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/GT-N7000/btld:system/bin/btld
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/GT-N7000/BCM4330B1_002.001.003.0485.0501.hcd:system/bin/BCM4330B1_002.001.003.0485.0501.hcd
+   
+endif
+
+include $(all-subdir-makefiles)
+
+endif

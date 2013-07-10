@@ -1,0 +1,2 @@
+Adaptations to Oprofile for use with Samsung products are contained in ./android/vendor/samsung/variant/external/oprofile.
+See ./android/vendor/samsung/variant/external/oprofile/README for details.
